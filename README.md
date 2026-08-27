@@ -13,7 +13,10 @@ uv run pytest -q
 uv run python main.py
 
 ## Hallazgos
-- (Persona A): Se detectaron 39,202 valores faltantes distribuidos en 25 columnas, 22 columnas presentan aproximadamente el 84% de nulos, mientras que county y community presentan cerca del 59% y OtherPerCap solo un valor faltante
+
+- (A) Se detectaron 39,202 valores faltantes distribuidos en 25 columnas, 22 columnas presentan aproximadamente el 84% de nulos, mientras que county y community presentan cerca del 59% y OtherPerCap solo un valor faltante
+
+- (B) Las funciones de análisis permitieron filtrar registros, resumir variables por grupos, estandarizar datos con z-score, obtener los valores más altos y ajustar una recta por mínimos cuadrados.
 
 ## Decisiones de limpieza
 - Se eliminaron las 22 columnas que tenían aproximadamente 84 % de valores nulos, ya que conservarlas implicaría trabajar con muy poca información disponible.
