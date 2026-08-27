@@ -13,4 +13,5 @@ uv run pytest -q
 uv run python main.py
 
 ## Hallazgos
+- (B) Las funciones de análisis permitieron filtrar registros, resumir variables por grupos, estandarizar datos con z-score, obtener los valores más altos y ajustar una recta por mínimos cuadrados.
 ## Decisiones de limpieza
