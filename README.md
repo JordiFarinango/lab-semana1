@@ -16,7 +16,7 @@ uv run python main.py
 
 - (A) Se detectaron 39,202 valores faltantes distribuidos en 25 columnas, 22 columnas presentan aproximadamente el 84% de nulos, mientras que county y community presentan cerca del 59% y OtherPerCap solo un valor faltante
 
-- (B) Las funciones de análisis permitieron filtrar registros, resumir variables por grupos, estandarizar datos con z-score, obtener los valores más altos y ajustar una recta por mínimos cuadrados.
+- (B) En el ajuste por mínimos cuadrados entre PopDens y ViolentCrimesPerPop se obtuvo una pendiente aproximada de 0.323 y un intercepto de 0.163, lo que indica una relación lineal positiva entre ambas variables en este conjunto de datos. Además, los cinco valores más altos de ViolentCrimesPerPop alcanzaron 1.0.
 
 ## Decisiones de limpieza
 - Se eliminaron las 22 columnas que tenían aproximadamente 84 % de valores nulos, ya que conservarlas implicaría trabajar con muy poca información disponible.

@@ -2,7 +2,13 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from src.analisis import recta_minimos_cuadrados, resumen_por_grupo, zscore
+from src.analisis import (
+    filtrar,
+    recta_minimos_cuadrados,
+    resumen_por_grupo,
+    top_k,
+    zscore,
+)
 
 
 @pytest.fixture
@@ -31,3 +37,12 @@ def test_recta_minimos_cuadrados():
 
     assert a == pytest.approx(2.0)
     assert b == pytest.approx(1.0)
+
+def test_filtrar_supera_umbral(df_mini):
+    resultado = filtrar(df_mini, "valor", 20)
+    assert resultado["valor"].tolist() == [30.0, 40.0]
+
+
+def test_top_k_devuelve_mayores(df_mini):
+    resultado = top_k(df_mini, "valor", 2)
+    assert resultado["valor"].tolist() == [40.0, 30.0]
